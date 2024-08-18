@@ -20,7 +20,7 @@ const socialLinks = [
   {
     id: "cv",
     title: "CV",
-    url: "./src/assets/CV.pdf",
+    url: "https://pdflink.to/mycv/",
     icon: cv 
   },
 ];
