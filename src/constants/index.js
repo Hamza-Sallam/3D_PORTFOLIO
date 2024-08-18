@@ -29,20 +29,6 @@ import {
   numpy,
 } from "../assets";
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-];
 
 const services = [
   {
@@ -185,19 +171,6 @@ const experiences = [
     ],
   },
 
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
 ];
 
 
@@ -245,7 +218,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    // image: jobit,
+
     source_code_link: "https://github.com/Hamza-Sallam/products-api",
   },
   {
@@ -291,7 +264,7 @@ const projects = [
   {
     name: " NLP machine translation model",
     description:
-      "Anexample-based machine translation model that translates sentences from Turkish English and Turkish-Azerbaijani based on a corpus of 30k sentences.",
+      "An example-based machine translation model that translates sentences from Turkish English and Turkish-Azerbaijani based on a corpus of 30k sentences.",
     tags: [
       {
         name: "Python",

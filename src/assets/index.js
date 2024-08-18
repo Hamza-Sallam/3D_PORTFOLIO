@@ -29,6 +29,9 @@ import postgre from "./tech/postgre.png";
 import r from "./tech/r.png";
 import raspi from "./tech/raspi.png";
 import tensorflow from "./tech/tensorflow.png";
+import linkedin from './linkedin.png';
+import cv from "./cv.png";
+
 
 
 
@@ -71,4 +74,6 @@ export {
   raspi,
   tensorflow,
   numpy,
+  linkedin,
+  cv,
 };

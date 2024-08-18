@@ -1,9 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu, close, github,linkedin,cv} from "../assets";
+
+
+const socialLinks = [
+  {
+    id: "linkedin",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/Hamza-Sallam",
+    icon: linkedin
+  },
+  {
+    id: "github",
+    title: "GitHub",
+    url: "https://github.com/Hamza-Sallam",
+    icon:github,
+  },
+  {
+    id: "cv",
+    title: "CV",
+    url: "./src/assets/CV.pdf",
+    icon: cv 
+  },
+];
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -50,17 +70,17 @@ const Navbar = () => {
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
-          {navLinks.map((nav) => (
+        {socialLinks.map((link) => (
             <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              key={link.id}
+              className={`text-secondary hover:text-white text-[18px] font-medium cursor-pointer`}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+              <img src={link.icon} alt={link.title} className='w-6 h-6' />
+              </a>
             </li>
           ))}
+          
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -77,18 +97,17 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-              {navLinks.map((nav) => (
+
+
+              {/* Render social links in the mobile menu */}
+              {socialLinks.map((link) => (
                 <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+                  key={link.id}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] text-secondary hover:text-white`}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    {link.title}
+                  </a>
                 </li>
               ))}
             </ul>
