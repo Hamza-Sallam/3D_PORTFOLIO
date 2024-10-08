@@ -138,9 +138,9 @@ const experiences = [
     company_name: "Incube Venture Studios",
     icon: incube,
     iconBg: "#383E56",
-    date: "July 2024 - Present",
+    date: "July 2024 - October 2024",
     points: [
-      "Implementing RESTful apis using Java and Quarkus",
+      "Implementing RESTful apis using Java and Quarkus framework",
       "learning to Apply clean architecture in the backend",
       "Implementing Frontend applications using VueJs",
       "Getting prepared to Participate in large scale projects",
